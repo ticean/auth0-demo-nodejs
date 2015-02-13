@@ -1,0 +1,27 @@
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- font awesome from BootstrapCDN -->
+        <link href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css" rel="stylesheet">
+        <link href="//maxcdn.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet">
+
+        <link href="/public/app.css" rel="stylesheet">
+    </head>
+    <body class="home">
+        <div class="container">
+            <div class="login-page clearfix">
+              <div class="logged-in-box auth0-box logged-in">
+                <h1 id="logo"><img src="/public/auth0_logo_final_blue_RGB.png" /></h1>
+                <img class="avatar" src="{{user.picture}}" height="100px" width="100px" />
+                <h2>You are logged in as <span class="name">{{user.displayName}}</span></h2>
+                <p>UID: {{user.id}}</p>
+                <p>This is a Node.js application.</p>
+                {% if url %}
+                <h3 class="url">You wanted to go to <span class="bold">{{url}}</span></h3>
+                {% endif %}
+              </div>
+            </div>
+        </div>
+    </body>
+</html>
